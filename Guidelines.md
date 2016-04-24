@@ -4,7 +4,7 @@ To write a non trivial project that takes about 2 days for an inexperienced deve
 
 The project should be partitioned so that different components can be completed and tested without dependency on other sections. This is to make sure the developer can demonstrate their full skill in an area and not have it be hampered by lack of experience in another area. The emphasis is on assessing if the developer can write clean, maintainable code that is on par with acceptable standards. The project should not be answerable in whole by Google; but sections are OK to be Google-able. It should be easy to assess the correctness of the solution (either because it is easy to see, or because there is a test suite available to assert it against).
 
-It is NOT expected that an inexperienced developer is able to finish every section. The baseline of someone who should be able to complete the project to full spec is a 3rd year Computer Science / Software Engineering major.
+It is **not** expected that an inexperienced developer is able to finish every section. The baseline of someone who should be able to complete the project to full spec is a 3rd year Computer Science / Software Engineering major.
 
 The language used should be around level of a novice developer. Terminology should be kept to a minimum, or should be explained on use. The vocabulary should also be accessible to younger developers, about 13 years of age or higher.
 

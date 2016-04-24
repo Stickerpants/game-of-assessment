@@ -30,6 +30,8 @@ I wholeheartedly welcome contributions to this repository. Please feel free to s
 
 I will review submitted projects and communicate feedback, and eventually merge them into the repository. You will be given full credit for any projects that you submit.
 
+This repository is licensed under the Apache license.
+
 #More information
 
 I have a tumblr where I post about topics in Computer Science and Software Engineering, which can [be found here](http://stickerpants.tumblr.com/). The majority of my content is education focused.

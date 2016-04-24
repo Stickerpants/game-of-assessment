@@ -56,7 +56,9 @@ From here, the pattern continues to alternate between the two states (vertical b
 
 Implement the Game of Life, as described above. Before you start, look at the list of extensions, and decide which ones you want to attempt. Relevant extensions are tagged in the question. It's easier to plan the design of your program, if you know the full breadth of want you want to accomplish first. You may use any programming language you'd like. Keep in mind that you are **not** expected to implement every extension. Recommended is to pick 2 or 3 of them that interest you.
 
-Searching external help resources is encouraged! It's not expected that you should be able to implement everything in this program without searching Google or Stackoverflow. However: looking up full, complete solutions and copy-pasting code is **extremely discouraged**, as it defeats the purporse of the project. 
+Searching external help resources is encouraged! It's not expected that you should be able to implement everything in this program without searching Google or Stackoverflow.
+
+However: looking up full, complete solutions and copy-pasting code is **extremely discouraged**, as it defeats the purporse of the project. 
 
 The program shall read the initial state of the world from a file. Assume that the octothorpe (`#`) represents a cell that is dead, and the asterisk (`*`) represents a cell that is alive.
 
@@ -80,9 +82,9 @@ The program shall receive the filename of the world file to load through the arg
 
 Think carefully about possible ways the user could break your program. What if they give you a world file that isn't formatted properly? You should handle these cases in a graceful way that lets the user know what's broken.
 
-Make sure you build your program using clean code, well written code that will be easy to modify and add to in the future. Put yourself in the mindset that this is a project that you'll want to work on over a long period of time, and that other people may be reading and adding to your code. This is the reality of any major software project!
+Make sure you build your program using clean, well written code that will be easy to modify and add to in the future. Put yourself in the mindset that this is a project that you'll want to work on over a long period of time, and that other people may be reading and adding to your code. This is the reality of any major software project!
 
-To begin the project, fork this repository and write your solution. This keeps a nice record of everyone who is working on it. Alternatively, 
+To begin the project, fork this repository and write your solution. This keeps a nice record of everyone who is working on it.
 
 #Extensions
 
@@ -92,20 +94,23 @@ In the original specification of the Game of Life, the world is infinite. Implem
 
 ##Extension 2
 
+Consider different ways of handling the edges of the grid. What if the grid were to "wrap" around, and consider cells from the opposite side of the grid? Implement this "wrap-around" grid handling as an optional strategy in your program. 
+
 Notes: 
 * Not compatible with Extension 1.
-
-Consider different ways of handling the edges of the grid. What if the grid were to "wrap" around, and consider cells from the opposite side of the grid? Implement this "wrap-around" grid handling as an optional strategy in your program. 
 
 ##Extension 3
 
 The Game of Life is a specific configuration of something called a "Cellular Automaton". Different rules arise in different simulations. Implement the ability for a user to specify the rules for themselves, in a file. The program should read the rule file to determine how to mutate the world. The rules shall be specified using the language below, and it's up to you to parse the language.
 
-Language specification:
-	; Denotes comment - ignore everything that follows
-	CELL (ALIVE/DEAD) -> (ALIVE/DEAD) IF N IS [(LESS THAN/GREATER THAN) [OR EQUAL TO]] <integer>)
+The language has two types of statements.
 
-Here's the Game of Life rule-set written in the language:
+* A semicolon (`;`) denotes a comment. We ignore everything that follows a semicolon. 
+* CELL (ALIVE/DEAD) -> (ALIVE/DEAD) IF N IS [(LESS THAN/GREATER THAN) [OR EQUAL TO]] <integer>)
+	* This is a cell directive. The first part describes what state applies to the cell. `ALIVE -> DEAD` means we should apply this rule to cells that are alive, and kill it if the condition holds.
+	* The second part is the condition, which performs a test on a number of neighbors. We can test for strict inequality using `LESS THAN` or `GREATER THAN`, or the similar `LESS THAN OR EQUAL TO`. We can also test for exact matches using `IS`.
+
+Here's the Game of Life rule-set written in the language.
 
 ```
 ; These are the rules for the Game of Life.
@@ -120,20 +125,20 @@ The Game of Life would be a lot more interesting if it had graphics. Put a graph
 
 ##Extension 5
 
+Give the user more control over the simulation by implementing time controls. The user should be able to pause, fast-forward, rewind, and play one step forwards or backwards.
+
 Notes:
 
 * May be easier if done with Extension 4, since it makes writing user controls significantly easier.
 
-Give the user more control over the simulation by implementing time controls. The user should be able to pause, fast-forward, rewind, and play one step forwards or backwards.
-
 ##Extension 6
+
+Make things more fun by allowing the user to modify the world to turn cells on/off. The user should only be allowed to modify the world when the game is paused (Extension 5).
 
 Notes:
 
 * Requires part of Extension 5 for pause control.
 * May be easier if done with Extension 4, since it makes writing user controls significantly easier.
-
-Make things more fun by allowing the user to modify the world to turn cells on/off. The user should only be allowed to modify the world when the game is paused (Extension 5).
 
 ##Extension 7
 
@@ -141,17 +146,17 @@ In order to be more confident that your program is working, write a suite of uni
 
 ##Extension 8
 
+Implement a way to pan around your world, to look at different parts of it.
+
 Notes:
 
 * Requires Extension 1 to be interesting.
 * May be easier if done with Extension 4, since it makes writing user controls significantly easier.
 
-Implement a way to pan around your world, to look at different parts of it.
-
 ##Extension 9
+
+Implement a way to zoom in and out of your world. If you do this for ASCII-based output, you will have to think about how to represent the change in scale when the size of your "unit" stays the same.
 
 Notes:
 
 * May be easier if done with Extension 4, since it makes writing user controls significantly easier.
-
-Implement a way to zoom in and out of your world. If you do this for ASCII-based output, you will have to think about how to represent the change in scale when the size of your "unit" stays the same.
