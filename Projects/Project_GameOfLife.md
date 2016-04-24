@@ -106,7 +106,7 @@ The Game of Life is a specific configuration of something called a "Cellular Aut
 The language has two types of statements.
 
 * A semicolon (`;`) denotes a comment. We ignore everything that follows a semicolon. 
-* CELL (ALIVE/DEAD) -> (ALIVE/DEAD) IF N IS [(LESS THAN/GREATER THAN) [OR EQUAL TO]] <integer>)
+* `CELL (ALIVE/DEAD) -> (ALIVE/DEAD) IF N IS [(LESS THAN/GREATER THAN) [OR EQUAL TO]] <integer>)`
 	* This is a cell directive. The first part describes what state applies to the cell. `ALIVE -> DEAD` means we should apply this rule to cells that are alive, and kill it if the condition holds.
 	* The second part is the condition, which performs a test on a number of neighbors. We can test for strict inequality using `LESS THAN` or `GREATER THAN`, or the similar `LESS THAN OR EQUAL TO`. We can also test for exact matches using `IS`.
 
