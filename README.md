@@ -24,11 +24,15 @@ In the Projects folder, you'll find markdown documents, each with a project desc
 
 To start an attempt, fork this repository and regularly commit your work. I'm always interested in seeing progress! Exemplary solutions to problems will be given the recognition it deserves in the project document.
 
+If you would like people to give feedback on your solution, put a line saying something along the lines of "I am looking for feedback on my solution" in the README of your fork.
+
 #Contributing
 
 I wholeheartedly welcome contributions to this repository. Please feel free to submit pull requests for grammar and formatting changes. If you'd like to write a new project, that's even better! Check the [Guidelines](Guidelines.md) for what a project should strive to be.
 
 I will review submitted projects and communicate feedback, and eventually merge them into the repository. You will be given full credit for any projects that you submit.
+
+Additionally, check the forks of the repository for solution attempts made by other people. If they have explicitly asked for feedback on their solution, please feel free to help them out! **Avoid giving feedback to people who have not asked for it, as some people may find criticism to be discouraging.** You can read the [Feedback section in the Guidelines](Guidelines.md#feedback) for tips on how to give good constructive advice.
 
 This repository is licensed under the Apache license.
 

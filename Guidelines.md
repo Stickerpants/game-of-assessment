@@ -62,3 +62,22 @@ The language used should be around level of a novice developer. Terminology shou
 * Does the developer "reinvent the wheel" excessively, or without good justification?
 * Does the developer write code that is just "good enough", like they don't care?
 * Does the developer tunnel-vision on very specific problems, without seeing the bigger picture?
+
+#Feedback
+
+When giving feedback to solutions a developer has made, focus on objective criticism written in a third-person neutral tone. For example, instead of saying "You wrote this part wrong", we can better phrase it as "This part can be improved by doing \_\_\_\_\_\_ instead".
+
+The general structure you should aim for give in advice is outlined below.
+
+1. Explicitly identify the problem.
+	* Sometimes, it may be hard for an inexperienced developer to recognize something that might seem immediately obvious to you.
+2. Explain the reasoning behind *why* said thing is a problem.
+3. Ask thought-provoking questions that leads the reader to a better understanding of the problem as a whole.
+4. Give a concrete solution the problem in a different context.
+	* i.e. Don't outright give away the solution to the problem. Instead, solve something similar, as a way to guide the reader into solving the original problem themselves.
+	* One can also give a partial solution, and then lead the reader into solving the rest.
+5. Point out anything the reader did correctly, to reinforce positive habits.
+
+Ideally, try to avoid giving feedback on things that are largely a matter of preference. Avoid nitpicking syntax and style, unless you believe it to negatively impact the readability or maintainability of the code.
+
+If you disagree with a design choice they've made, make sure to outline the context and assumptions you've made as part of your reasoning. For example, if someone's implemented a complicated design pattern that is overkill for the problem at hand (but is sound and cogent code), make sure that you don't give the impression that their solution is wrong. Instead, state the context ("Since the problem is simple because of ..."), and then suggest an alternative design ("Instead, a simple `switch` statement would have been more appropriate in this case").
