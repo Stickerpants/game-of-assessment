@@ -14,8 +14,8 @@ Every tick, cells will evolve based on four basic rules. When we talk about the 
 
 1. If an alive cell has less than 2 alive neighbors, then it dies (turns off), because it is lonely.
 2. If an alive cell has more than 3 alive neighbors, then it also dies, because it is too crowded.
-3. If an alive cell has 2 or 3 neighbors, then it continues living since it is happy.
-4. If a dead cell has exactly 3 neighbors, then it becomes alive (turns on), like it is born.
+3. If an alive cell has 2 or 3 alive neighbors, then it continues living since it is happy.
+4. If a dead cell has exactly 3 alive neighbors, then it becomes alive (turns on), like it is born.
 
 Something important to keep in mind, is there are two stages to how the tick happens. First, every cell looks at the current state the world is in, and figures out what they need to do (based on the rules above). A cell could do one of three things: it could die (Rules 1 and 2), it could stay as it is (Rule 3, or if no rule applies), or it could come alive (Rule 4). After the cells have figured out what to do, the second stage happens, where they make their change. The reason why this is done in two stages is to prevent a tricky condition: If cells immediately changed, then the cells around it might end up making a different choice, and we want to avoid that.
 
