@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 Conway's Game of Life is a simple simulation that can be made in any programming language. Conceptually, the idea is easy to understand: imagine a flat world, that's divided into a grid. Each square of the grid is called a cell. Each cell can either be on or off. Sometimes, people like to call these states "alive" and "dead". Time progresses in the world based on an interval, called a tick.
 
@@ -52,7 +52,7 @@ Second tick happens. The center cell stays alive again, since it still has 2 nei
 
 From here, the pattern continues to alternate between the two states (vertical bar and horizontal bar).
 
-#Objective
+# Objective
 
 Implement the Game of Life, as described above. Before you start, look at the list of extensions, and decide which ones you want to attempt. Relevant extensions are tagged in the question. It's easier to plan the design of your program, if you know the full breadth of want you want to accomplish first. You may use any programming language you'd like. Keep in mind that you are **not** expected to implement every extension. Recommended is to pick 2 or 3 of them that interest you.
 
@@ -86,20 +86,20 @@ Make sure you build your program using clean, well written code that will be eas
 
 To begin the project, fork this repository and write your solution. This keeps a nice record of everyone who is working on it.
 
-#Extensions
+# Extensions
 
-##Extension 1
+## Extension 1
 
 In the original specification of the Game of Life, the world is infinite. Implement this infinite world. Assume that the center of the world starts from the center of the initial world file.
 
-##Extension 2
+## Extension 2
 
 Consider different ways of handling the edges of the grid. What if the grid were to "wrap" around, and consider cells from the opposite side of the grid? Implement this "wrap-around" grid handling as an optional strategy in your program. 
 
 Notes: 
 * Not compatible with Extension 1.
 
-##Extension 3
+## Extension 3
 
 The Game of Life is a specific configuration of something called a "Cellular Automaton". Different rules arise in different simulations. Implement the ability for a user to specify the rules for themselves, in a file. The program should read the rule file to determine how to mutate the world. The rules shall be specified using the language below, and it's up to you to parse the language.
 
@@ -119,11 +119,11 @@ CELL ALIVE -> DEAD IF N IS GREATER THAN 3
 CELL DEAD -> ALIVE IF N IS 3
 ```
 
-##Extension 4
+## Extension 4
 
 The Game of Life would be a lot more interesting if it had graphics. Put a graphical interface on top of your program. How things are displayed are up to you to decide. The program must be able to switch between console output mode and graphical mode.
 
-##Extension 5
+## Extension 5
 
 Give the user more control over the simulation by implementing time controls. The user should be able to pause, fast-forward, rewind, and play one step forwards or backwards.
 
@@ -131,7 +131,7 @@ Notes:
 
 * May be easier if done with Extension 4, since it makes writing user controls significantly easier.
 
-##Extension 6
+## Extension 6
 
 Make things more fun by allowing the user to modify the world to turn cells on/off. The user should only be allowed to modify the world when the game is paused (Extension 5).
 
@@ -140,11 +140,11 @@ Notes:
 * Requires part of Extension 5 for pause control.
 * May be easier if done with Extension 4, since it makes writing user controls significantly easier.
 
-##Extension 7
+## Extension 7
 
 In order to be more confident that your program is working, write a suite of unit tests to ensure everything in your program behaves correctly. Think about how you would go about testing your program in an automated way. Does it change the way you might structure your code?
 
-##Extension 8
+## Extension 8
 
 Implement a way to pan around your world, to look at different parts of it.
 
@@ -153,7 +153,7 @@ Notes:
 * Requires Extension 1 to be interesting.
 * May be easier if done with Extension 4, since it makes writing user controls significantly easier.
 
-##Extension 9
+## Extension 9
 
 Implement a way to zoom in and out of your world. If you do this for ASCII-based output, you will have to think about how to represent the change in scale when the size of your "unit" stays the same.
 
